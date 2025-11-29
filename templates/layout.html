@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Thapar Sports Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo-box">TS</div>
+        <div>
+          <div class="brand-title">Thapar Sports</div>
+          <div class="brand-sub">Student Portal</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('facilities_page') }}">Facilities</a>
+        <a href="{{ url_for('help_page') }}">Help</a>
+        <a href="{{ url_for('booking') }}" class="btn-primary">Booking</a>
+      </nav>
+      <div class="userbox">
+        <a href="{{ url_for('logout') }}" class="btn ghost">Logout</a>
+      </div>
+    </div>
+  </header>
+  <main class="container">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

@@ -1,0 +1,73 @@
+:root{
+  --brand:#c10016;
+  --brand-dark:#a00012;
+  --bg:#fff;
+  --border:#e0e0e0;
+  --muted:#666;
+}
+
+body{margin:0;font-family:Segoe UI,Roboto,sans-serif;background:var(--bg);color:#111;}
+.container{width:90%;margin:auto;}
+a{text-decoration:none;color:inherit}
+
+/* Header */
+.site-header{background:var(--brand);color:#fff;padding:10px 0;}
+.header-row{display:flex;justify-content:space-between;align-items:center;}
+.nav a{padding:8px 14px;border-radius:20px;}
+.nav a:hover,.btn-primary{background:#fff;color:var(--brand);}
+.btn.ghost{border:1px solid #fff;padding:6px 10px;border-radius:6px;color:#fff;}
+.btn.ghost:hover{background:#fff;color:var(--brand);}
+
+/* Cards */
+.card{border:1px solid var(--border);padding:15px;border-radius:12px;margin:10px 0;}
+.grid{display:grid;gap:15px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));}
+.slots{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));}
+.slot{padding:8px;text-align:center;border-radius:8px;border:1px solid var(--border);}
+.slot.free{background:#e8f5e9;}
+.slot.taken{background:#ffcdd2;color:#800;}
+.slot.locked{background:#eee;color:#555;}
+.slot.selected{outline:2px solid var(--brand);}
+
+/* Login Page */
+.login-body{background:linear-gradient(135deg,var(--brand) 50%,#fff 50%);height:100vh;display:flex;align-items:center;justify-content:center;}
+.login-box{background:#fff;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.1);padding:30px 40px;width:350px;text-align:center;}
+.login-box h1{color:var(--brand);}
+input{width:100%;padding:10px;margin:6px 0;border-radius:8px;border:1px solid var(--border);}
+.btn{cursor:pointer;border:none;border-radius:8px;padding:10px 14px;font-weight:600;}
+.btn-primary{background:var(--brand);color:#fff;}
+.btn-primary:hover{background:var(--brand-dark);}
+.full{width:100%;}
+.error{color:red;}
+
+.success-message {
+  background: #e8f5e9;
+  border: 1px solid #b2dfdb;
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 15px;
+  font-weight: 600;
+  display: none;
+}
+.success-message.visible {
+  display: block;
+}
+.form-row {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.input-field {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+

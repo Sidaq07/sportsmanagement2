@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Facilities</h2>
+<div class="grid">
+  {% for f in facilities %}
+  <div class="card">
+    <h3>{{ f.name }}</h3>
+    <p>{{ f.details }}</p>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
